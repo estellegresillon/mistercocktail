@@ -1,11 +1,28 @@
-<h1><%= @cocktail.name %></h1>
-<%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail.id) %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('<%= @cocktail.image_url %>'); height: 50vh; background-position: center;">
+  <h1><%= @cocktail.name %></h1>
+</div>
 
-<% @cocktail.ingredients.each do |i| %>
-  <p><%= i.name %></p>
-<% end %>
-<% @cocktail.doses.each do |d| %>
-  <p><%= d.description %></p>
-<% end %>
+<div class="row">
+
+  <div class="col-xs-12 col-sm-6">
+    <ul class="list-unstyled">
+      <% @cocktail.doses.each do |d| %>
+        <li class="dose"><%= d.description %> - <%= d.ingredient.name %> - <span class="delete">X</span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <h4>Add ingredient :</h4>
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <%= f.association :ingredient, prompt: "Choose an ingredient" %>
+        <%= f.input :description %>
+
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
 
 <%= link_to "Go back to list", cocktails_path %>
+<%= link_to 'Delete cocktail', cocktail_path(@cocktail.id), method: :delete %>

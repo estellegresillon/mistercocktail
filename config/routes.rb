@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   end
 
   resources :doses, only: :destroy
+  resources :cocktails, only: :destroy
 end
