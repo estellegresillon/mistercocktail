@@ -62,5 +62,6 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-rails'
 gem 'simple_form'
-gem "pry-byebug"
+gem 'pry-byebug'
 gem 'faker'
+gem 'jquery-rails'
