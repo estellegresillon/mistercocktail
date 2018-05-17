@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>CREATE A NEW DOSE</h1>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.submit "add a dose", class: "btn btn-primary" %>
+  <% end %>
+
+
+</div>
