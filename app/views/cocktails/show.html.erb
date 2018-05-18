@@ -18,7 +18,7 @@
       <%= simple_form_for [ @cocktail, @dose ] do |f| %>
         <%= f.association :ingredient, prompt: "Choose an ingredient" %>
         <%= f.input :description %>
-        <%= f.submit "Add", class: "btn btn-primary" %>
+        <%= f.submit "Add", class: "submit" %>
       <% end %>
   </div>
 </div>
@@ -42,7 +42,7 @@
       <%= simple_form_for [ @cocktail, @review ] do |f| %>
         <%= f.input :rating %>
         <%= f.input :content %>
-        <%= f.submit "add a review", class: "btn btn-primary" %>
+        <%= f.submit "add a review", class: "submit" %>
       <% end %>
   </div>
 </div>

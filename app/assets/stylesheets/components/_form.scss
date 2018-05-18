@@ -1,0 +1,21 @@
+// form {
+//   display: flex;
+//   flex-direction : column;
+//   width: 70%;
+// }
+
+#dose_ingredient_id, #review_rating {
+  height: 50px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+#dose_description, #review_content {
+  height: 200px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
