@@ -12,4 +12,3 @@ import "jquery";
 console.log('Hello World from Webpacker')
 
 import "../components/init_tooltip"
-import "../components/delete_dose"
