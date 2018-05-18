@@ -2,7 +2,8 @@
   <h1><%= @cocktail.name %></h1>
 </div>
 
-<div class="row">
+<div class="content" >
+  <div class="row">
 
   <div class="col-xs-12 col-sm-6">
     <ul class="list-unstyled">
@@ -20,29 +21,33 @@
         <%= f.input :description %>
         <%= f.submit "Add", class: "submit" %>
       <% end %>
-  </div>
-</div>
-
-<%= link_to "Go back to list", cocktails_path %>
-<%= link_to 'Delete cocktail', cocktail_path(@cocktail.id), method: :delete %>
-
-<div class="row">
-
-  <div class="col-xs-12 col-sm-6">
-    <ul class="list-unstyled">
-      <% @cocktail.reviews.each do |d| %>
-        <li class="dose"><%= d.rating %></li>
-        <li class="dose"><%= d.content %></li>
-      <% end %>
-    </ul>
+    </div>
   </div>
 
-  <div class="col-xs-12 col-sm-6">
-    <h4>Add a review :</h4>
-      <%= simple_form_for [ @cocktail, @review ] do |f| %>
-        <%= f.input :rating %>
-        <%= f.input :content %>
-        <%= f.submit "add a review", class: "submit" %>
-      <% end %>
+  <div class="review">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6">
+      <ul class="list-unstyled">
+        <% @cocktail.reviews.each do |d| %>
+          <li class="dose"><%= d.rating %></li>
+          <li class="dose"><%= d.content %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <h4>Add a review :</h4>
+        <%= simple_form_for [ @cocktail, @review ] do |f| %>
+          <%= f.input :rating %>
+          <%= f.input :content %>
+          <%= f.submit "add a review", class: "submit" %>
+        <% end %>
+    </div>
   </div>
+  </div>
+
+
+  <%= link_to "Go back to list", cocktails_path %>
+  <%= link_to 'Delete cocktail', cocktail_path(@cocktail.id), method: :delete %>
 </div>

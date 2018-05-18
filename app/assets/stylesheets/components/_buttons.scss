@@ -37,3 +37,11 @@
   font-weight: bolder;
   color: white;
 }
+
+.buttons {
+  display: flex;
+  justify-content:space-around;
+  .btn-yellow {
+    margin: 10px;
+  }
+}
