@@ -2,6 +2,7 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :destroy]
 
 
+
   def index
     @cocktails = Cocktail.all
   end
@@ -18,7 +19,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
-      redirect_to @cocktail, notice: "Cocktail created !"
+      redirect_to @cocktail, success: "Cocktail created !"
     else
       render :new
     end

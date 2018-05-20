@@ -1,5 +1,5 @@
 .btn-yellow {
-  background-color: #FFA500;
+  background-color: #90DFAA;
   width: 220px;
   font-color: white;
   padding: 12px 20px;
@@ -12,15 +12,15 @@
 }
 
 .btn-yellow:hover {
-  background-color: #FFD700;
+  background-color: #90DFD2;
   font-weight: bolder;
   color: white;
 }
 
 
 .submit {
-  background-color: #FFA500;
-  border: 3px solid #FFA500;
+  background-color: #90DFAA;
+  border: 3px solid #90DFAA;
   width: 100%;
   font-color: white;
   padding: 12px 20px;
@@ -32,8 +32,8 @@
 }
 
 .submit:hover {
-  background-color: #FFD700;
-  border: 3px solid #FFD700;
+  background-color: #90DFD2;
+  border: 3px solid #90DFD2;
   font-weight: bolder;
   color: white;
 }
@@ -44,4 +44,9 @@
   .btn-yellow {
     margin: 10px;
   }
+}
+
+.goback {
+  text-align: center;
+  margin-bottom: 50px;
 }

@@ -1,5 +1,7 @@
+<%= render "layouts/navbar" %>
 <div class="container">
-  <h1 class="text-center">All cocktails</h1>
+  <h1 class="text-center">Our cocktails</h1>
+  <h4 class="text-center">The most loved recipes gathered in one place.</h4>
   <div class="cards">
     <% @cocktails.each do |c| %>
       <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('<%= c.image_url %>'); background-position: center;">
@@ -11,3 +13,4 @@
   <%= link_to "Add a cocktail", new_cocktail_path, class: "btn-yellow" %>
 </div>
 
+<%= render "layouts/footer" %>
