@@ -4,7 +4,7 @@
   <div class="banner-header">
     <h1><%= @cocktail.name %></h1>
   </div>
-  <div class="banner-content">
+  <div class="banner-content" id="sweet-alert-delete">
   <%= link_to image_tag('rubbish.png'), cocktail_path(@cocktail.id), method: :delete %>
   </div>
 </div>

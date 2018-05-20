@@ -9,6 +9,10 @@
 import "bootstrap";
 import "jquery";
 
-console.log('Hello World from Webpacker')
+import '../components/select2';
+console.log('Hello World from Webpacker');
 
-import "../components/init_tooltip"
+import "../components/init_tooltip";
+
+import { loadDynamicTitleText } from '../components/typed_title';
+loadDynamicTitleText();
